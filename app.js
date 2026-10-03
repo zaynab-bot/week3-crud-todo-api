@@ -104,8 +104,9 @@ app.use((err, req, res, next) => {
   });
 });
 
-const PORT = 3002;
 
-app.listen(PORT, () => {
+const PORT = process.env.PORT || 3002;
+
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server on port ${PORT}`);
 });
